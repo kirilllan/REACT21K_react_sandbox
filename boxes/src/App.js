@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from "./Header";
+import Footer from "./Footer";
+
+const Box = (props) => {
+  return (
+    <div className="box">
+      <h2>Name: {props.name}</h2>
+      <p>Age: {props.age}</p>
+      <h2>Title: {props.title}</h2>
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-         o hai
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          lern mor
-        </a>
-      </header>
+    <div>
+    <header>
+      <Header />
+      <h1>Logo</h1>
+    </header>
+    <main>
+      <Box name="meme"/>
+      <  Box   name="abc
+      cba" age="3" title="a"/>
+    <Box/>
+    </main>
+    < Footer />
     </div>
   );
 }
