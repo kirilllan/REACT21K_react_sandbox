@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
+import "./App.css"
 
-const App = () => {
-  return (
-    <div>
-      <h1>works?</h1>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1 className="circle">0</h1>
+      </div>
+    )
+  }
 }
+
 
 export default App;
