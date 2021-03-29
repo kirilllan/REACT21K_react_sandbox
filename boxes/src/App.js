@@ -2,16 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./Header";
 import Footer from "./Footer";
-
-const Box = (props) => {
-  return (
-    <div className="box">
-      <h2>Name: {props.name}</h2>
-      <p>Age: {props.age}</p>
-      <h2>Title: {props.title}</h2>
-    </div>
-  )
-}
+import Box from "./Box";
+import Main from "./Main";
 
 function App() {
   return (
@@ -24,7 +16,9 @@ function App() {
       <Box name="meme"/>
       <  Box   name="abc
       cba" age="3" title="a"/>
-    <Box/>
+    <Box name="box from component"/>
+    <Main />
+    < Main name ="das" />
     </main>
     < Footer />
     </div>
