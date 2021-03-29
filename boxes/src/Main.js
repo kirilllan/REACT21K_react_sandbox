@@ -21,9 +21,31 @@ class Main extends Component {
       }
     ]
   }
+  handleClick = () => {
+    this.setState({
+      persons: [
+        {
+          name: '	(¬‿¬ )',
+          age: 1.23,
+          title: '(◕‿◕)'
+        },
+        {
+          name: '	(¬‿¬ )',
+          age: 1.23,
+          title: '	(◕‿◕)  '
+        },
+        {
+          name: '	(¬‿¬ )',
+          age: 1.23,
+          title: '(◕‿◕)'
+        }
+      ]
+    })
+  }
   render() {
     return (
       <main>
+        <button onClick={this.handleClick}>       Change state       </button>
         <div>
           <Box name={this.state.persons[0].name} age={this.state.persons[0].age} title={this.state.persons[0].title} whateva="o yea"/>
           <Box name={this.state.persons[1].name} age={this.state.persons[1].age} title={this.state.persons[1].title}/>
