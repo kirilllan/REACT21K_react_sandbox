@@ -1,3 +1,13 @@
+body {
+  background-color: lightcyan;
+}
+#root {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkblue;
+}
 .circle {
   background-color: grey;
   height: 100px;
@@ -6,4 +16,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.even {
+  background-color: skyblue;
+}
+.odd {
+  background-color: lightgoldenrodyellow;
+}
+
+button {
+  border-radius: 5px;
+  background-color: skyblue;
+  border: none;
+  margin: 10px;
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: darkblue;
 }
