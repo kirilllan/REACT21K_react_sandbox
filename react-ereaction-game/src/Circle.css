@@ -22,5 +22,8 @@
 }
 
 .active {
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("./dino_waving_tail.gif");
+  background-size: cover;
+  z-index: -1;
 }
