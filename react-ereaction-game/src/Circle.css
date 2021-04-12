@@ -20,3 +20,7 @@
 .orange {
   background-color: orange;
 }
+
+.active {
+  background-color: white;
+}

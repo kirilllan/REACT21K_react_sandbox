@@ -1,6 +1,7 @@
 import React , {Component} from 'react';
 import Circle from "./Circle";
 import "./App.css";
+import GameOver from "./GameOver";
 
 const getRndInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -46,7 +47,7 @@ class App extends Component {
 
   render() {
     const circlesList = this.state.circles.map(c => {
-      return <Circle id={c.id} key={c.id} color={c.color} click={() =>this.clickHandler(c.id,c.color)} />
+      return <Circle id={c.id} key={c.id} color={c.color} click={() =>this.clickHandler(c.id,c.color)}  active={this.state.current === c.id}/>
     }); 
     return (
       <div>
