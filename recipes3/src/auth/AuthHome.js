@@ -1,12 +1,18 @@
 import React from 'react';
+import {useHistory} from "react-router-dom";
 import {signInWithGoogle} from "../firebase";
 
-export default function AuthHome() {
-
-
+const AuthHome = () => {
+  const history = useHistory();
+  const signIn = async () => {
+    await signInWithGoogle();
+    history.push("/");
+  }
   return (
     <div className="auth-home">
-      <button onClick={signInWithGoogle}>Sign in with google</button>
+      <button onClick={signIn}>Sign in with google</button>
     </div>
   )
 }
+
+export default AuthHome;

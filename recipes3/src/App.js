@@ -1,14 +1,15 @@
 import React from 'react'
 import Router from "./Router";
-import UserContext from "./context/UserContext";
+import { UserProvider } from "./context/UserContext";
 
 const  App = () => {
   return (
-    <UserProvider>
-     <Router />
-    </UserProvider>
+    <div className="container">
+      <UserProvider>
+        <Router />
+      </UserProvider>
+    </div>
   )
 }
 
 export default App;
-

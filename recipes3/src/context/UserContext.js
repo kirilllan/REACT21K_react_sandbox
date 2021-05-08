@@ -17,5 +17,5 @@ const UserProvider = (props) => {
   </UserContext.Provider>
 }
 
-export default userContext;
+export default UserContext;
 export { UserProvider };

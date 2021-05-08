@@ -15,6 +15,6 @@ firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-export const signInWithGoogle = async() => {
-  await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+export const signInWithGoogle = async () => {
+  await auth.signInWithPopup(new  firebase.auth.GoogleAuthProvider())
 }
