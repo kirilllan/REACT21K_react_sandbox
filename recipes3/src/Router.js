@@ -5,6 +5,8 @@ import NewRecipe from "./recipe/NewRecipe";
 import UserContext from "./context/UserContext";
 import RecipeList from "./recipe/RecipeList";
 import Recipe from "./recipe/RecipeList";
+import RecipeNavbar from "./recipe/RecipeNavbar";
+import EditRecipe from "./recipe/EditRecipe";
 
 const Router = () => {
   const user = useContext(UserContext);
@@ -13,6 +15,7 @@ const Router = () => {
       <Switch>
         {user ? (
         <>
+        <RecipeNavbar />
           <Route exact path="/">
             <RecipeList />
           </Route>
@@ -20,12 +23,11 @@ const Router = () => {
             <NewRecipe />
           </Route>
           <Route path="/recipe/:id" component={Recipe} />
+          <Route path="/edit/id" component={EditRecipe} />
         </>
         ) : (
         <>
-          <Route exact path="/">
-            <AuthHome />
-          </Route>
+          <AuthHome />   
         </>
         )}
       </Switch>
