@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import { firestore } from "../firebase";
+
 import { Button } from 'antd';
 
 const Recipe = (props) => {
@@ -44,7 +45,6 @@ const Recipe = (props) => {
 
   const renderRecipe = () => {
     const recipeData = recipe.data();
-    console.log(recipeData.description);
     return (
       <>
         <h2>{recipeData.name}</h2>
@@ -62,7 +62,7 @@ const Recipe = (props) => {
       <button onClick={() => history.push(`/edit/${props.match.params.id}`)}>
         Edit
       </button>
-      <Button danger type="text" onClick={deleteRecipe}>Deleteeeee</Button>
+      <Button danger type="text" onClick={deleteRecipe}>Delete</Button>
     </div>
   );
 };
