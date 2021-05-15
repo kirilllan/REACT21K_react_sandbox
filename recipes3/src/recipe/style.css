@@ -35,3 +35,22 @@ textarea {
 .recipe-navbar li {
   list-style: none;
 }
+
+.recipe-list {
+  margin-top: 50px;
+  color: chocolate;
+}
+.recipe-list a {
+  color: chocolate;
+}
+
+.recipe h2 {
+  color: chocolate;
+}
+.recipe li {
+  color: chocolate;
+}
+
+pre p {
+  color: chocolate;
+}
