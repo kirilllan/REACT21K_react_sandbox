@@ -9,8 +9,11 @@ class Todo extends Component {
         <br />
         <form>
           <input type="text" name="task" />
-          <button type="submit" onclick="localStorage.setItem(task.value, task.value)">add task</button>
+          <button type="submit" onclick={this.props.addTask}>add task</button>
         </form>
+        <ul>
+          {this.props.todos.mapDispatchToProps(todo => <li key={todo.id} onClick={() => this.props.onDelete(todo.id)}>{todo.value}</li>)}
+        </ul>
       </div>
     )
   }
@@ -24,7 +27,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    addTask: (task) => dispatch({ type: "ADD" }),
+    onDelete: () => dispatch({ type: "DELETE", item: id })
   }
 }
 
