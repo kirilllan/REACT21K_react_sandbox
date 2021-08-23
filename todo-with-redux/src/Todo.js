@@ -32,7 +32,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     addTask: () => dispatch({ type: "ADD", value: document.getElementById("task").value }),
-    delete: () => dispatch({ type: "DELETE", value: document.getElementById("task").value }),
+    delete: (e) => { console.log(e); return dispatch({ type: "DELETE", value: e.target.parentNode.childNodes[0].data }) },
     onStoreResult: () => dispatch({ type: 'STORE_RESULT', value: document.getElementById("task").value })
   }
 }
