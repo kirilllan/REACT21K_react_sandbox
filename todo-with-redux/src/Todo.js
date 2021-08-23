@@ -14,7 +14,7 @@ class Todo extends Component {
         </form>
         <ul>
           {this.props.storedResults.map(item => <li key={item.id}>{item.value}
-            <fakebutton onClick={this.props.delete}>X</fakebutton>
+            <fakebutton onClick={this.props.delete}>x</fakebutton>
           </li>)}
         </ul>
       </div>
@@ -32,7 +32,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     addTask: () => dispatch({ type: "ADD", value: document.getElementById("task").value }),
-    //delete: () => dispatch({ type: "DELETE", item: //id }),
+    delete: () => dispatch({ type: "DELETE", value: document.getElementById("task").value }),
     onStoreResult: () => dispatch({ type: 'STORE_RESULT', value: document.getElementById("task").value })
   }
 }
