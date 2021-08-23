@@ -21,10 +21,9 @@ class Todo extends Component {
     )
   }
 }
-// onClick={() => this.props.onDeleteResult(item.id)}
+
 const mapStateToProps = state => {
   return {
-    task: state.taskk,
     storedResults: state.results
   }
 }
@@ -32,7 +31,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     addTask: () => dispatch({ type: "ADD", value: document.getElementById("task").value }),
-    delete: (e) => { console.log(e); return dispatch({ type: "DELETE", value: e.target.parentNode.childNodes[0].data }) },
+    delete: (e) => dispatch({ type: "DELETE", value: e.target.parentNode.childNodes[0].data }),
     onStoreResult: () => dispatch({ type: 'STORE_RESULT', value: document.getElementById("task").value })
   }
 }
