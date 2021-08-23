@@ -13,7 +13,7 @@ class Todo extends Component {
           <button onClick={this.props.onStoreResult} onClick={this.props.addTask}>add task</button>
         </form>
         <ul>
-          {this.props.storedResults.map(item => <li key={item.id} onClick={() => this.props.onDeleteResult(item.id)}>{item.value}
+          {this.props.storedResults.map(item => <li key={item.id}>{item.value}
             <button onClick={this.props.delete}>X</button>
           </li>)}
         </ul>
@@ -21,7 +21,7 @@ class Todo extends Component {
     )
   }
 }
-
+// onClick={() => this.props.onDeleteResult(item.id)}
 const mapStateToProps = state => {
   return {
     task: state.taskk,
@@ -31,9 +31,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addTask: (task) => dispatch({ type: "ADD", value: task }),
-    //onDelete: () => dispatch({ type: "DELETE", item: //id }),
-    onStoreResult: () => dispatch({ type: 'STORE_RESULT', })
+    addTask: () => dispatch({ type: "ADD", value: document.getElementById("task").value }),
+    //delete: () => dispatch({ type: "DELETE", item: //id }),
+    onStoreResult: () => dispatch({ type: 'STORE_RESULT', value: document.getElementById("task").value })
   }
 }
 
