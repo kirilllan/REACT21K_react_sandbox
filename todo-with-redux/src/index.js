@@ -13,3 +13,11 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+document.addEventListener('click', (e) => {
+  if (e.target.nodeName == 'LI') {
+    if (e.target.style.textDecoration == 'line-through')
+      e.target.style.textDecoration = 'none'
+    else e.target.style.textDecoration = 'line-through'
+  }
+})
