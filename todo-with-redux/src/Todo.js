@@ -10,11 +10,11 @@ class Todo extends Component {
         <br />
         <form>
           <input type="text" name="task" id="task" />
-          <button onClick={this.props.onStoreResult} onClick={this.props.addTask}>add task</button>
+          <fakebutton onClick={this.props.onStoreResult} onClick={this.props.addTask}>add task</fakebutton>
         </form>
         <ul>
           {this.props.storedResults.map(item => <li key={item.id}>{item.value}
-            <button onClick={this.props.delete}>X</button>
+            <fakebutton onClick={this.props.delete}>X</fakebutton>
           </li>)}
         </ul>
       </div>
