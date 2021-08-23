@@ -1,9 +1,10 @@
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case "ADD": return { ...state, todos: state.todos.concat({ id: new Date(), value: state.val }) }
+    case "ADD": return { ...state, results: state.results.concat({ id: new Date(), value: state.taskk }) }
     case "DELETE":
-      const updatedArray = state.todos.filter(item => item.id !== action.item)
-      return { ...state, todos: updatedArray }
+    // const updatedArray = state.todos.filter(item => item.id !== action.item)
+    // return { ...state, todos: updatedArray }
+    case 'STORE_RESULT': return { ...state, results: state.results.concat({ id: new Date(), value: state.taskk }) }
   }
 
   return state
@@ -11,9 +12,9 @@ function reducer(state = initialState, action) {
 
 const initialState = {
   val: "",
-  todos: [{
+  results: [{
     id: 1,
-    value: task
+    value: 10
   }]
 }
 
