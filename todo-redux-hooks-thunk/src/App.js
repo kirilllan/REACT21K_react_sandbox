@@ -5,7 +5,8 @@ import Notes from './containers/Notes'
 function App() {
   return (
     <div className="App">
-      hi from app.js
+      <NewNote />
+      <Notes />
     </div>
   );
 }
