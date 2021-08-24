@@ -8,6 +8,10 @@ const reducer = (state = [], action) => {
         text: action.text,
         completed: action.completed
       })
+    case actionTypes.TOGGLE_TODO:
+      const noteToChange = state.find(n => n.id === action.id)
+      const changeNote = { ...noteToChange, completed: !noteToChange.completed }
+      return state.map((note) => (note.id !== action.id ? note : changeNote))
   }
   return state
 }

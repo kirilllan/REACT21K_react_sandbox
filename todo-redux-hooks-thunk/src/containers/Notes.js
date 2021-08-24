@@ -11,7 +11,7 @@ const Notes = () => {
   })
   return (
     <ul>
-      {notes.map((note) => (<li key={note.id} onClick={() => dispatch(toggleTodo(note.id))}>{note.text}</li>))}
+      {notes.map((note) => (<li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text}</li>))}
     </ul>
   );
 };
