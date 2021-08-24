@@ -1,4 +1,4 @@
-const reducer = (state = initialState, action) => {
+const reducer = (state = [], action) => {
   return state
 }
 
