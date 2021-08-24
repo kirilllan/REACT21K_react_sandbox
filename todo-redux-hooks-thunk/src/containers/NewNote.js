@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const NewNote = () => {
   const notes = useSelector(state => state)
+  let i = notes.length
   const dispatch = useDispatch()
   const addTodo = text => ({
     type: actionTypes.ADD_TODO,
@@ -12,13 +13,12 @@ const NewNote = () => {
     text: text,
     completed: false
   })
-  let i = notes.length
 
   return (
     <form onSubmit={e => {
       e.preventDefault()
       dispatch(addTodo(e.target.noteInput.value))
-      e.target.note.value = ''
+      e.target.noteInput.value = ''
     }}>
       <input type="text" name="noteInput"></input>
       <input type="submit" value="Add note"></input>
@@ -27,3 +27,12 @@ const NewNote = () => {
 };
 
 export default NewNote;
+
+const randId = times => {
+  let yourId = 0
+  while (times > 0) {
+    times--
+    yourId += Math.random().toString(36).slice(2)
+  }
+  return yourId
+}
