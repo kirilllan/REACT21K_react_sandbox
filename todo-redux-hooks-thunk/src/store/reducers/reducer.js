@@ -1,7 +1,10 @@
 import * as actionTypes from '../actions'
+import noteServices from '../../services/Notes'
 
 const reducer = (state = [], action) => {
   switch (action.type) {
+    case actionTypes.INIT_NOTES:
+      return action.data
     case actionTypes.ADD_TODO:
       return state.concat({
         id: action.id + 1,
