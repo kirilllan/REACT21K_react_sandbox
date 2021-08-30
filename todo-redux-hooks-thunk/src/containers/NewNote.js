@@ -5,14 +5,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createNote } from '../store/reducers/reducer'
 
 const NewNote = () => {
-  const notes = useSelector(state => state)
-  let i = notes.length
   const dispatch = useDispatch()
   const addTodo = async e => {
     e.preventDefault()
-    const text = e.target.note.value
+    const text = e.target.noteInput.value
     dispatch(createNote(text))
-    e.target.note.value = ""
+    e.target.noteInput.value = ""
   }
 
   return (
