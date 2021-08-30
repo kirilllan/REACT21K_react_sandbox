@@ -9,9 +9,12 @@ const Notes = () => {
     type: actionTypes.TOGGLE_TODO,
     id: id
   })
+  const remove = name => ({
+    type: actionTypes.REMOVE,
+  })
   return (
     <ul>
-      {notes.map((note) => (<li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text}</li>))}
+      {notes.map((note) => (<li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text} <button className="button-remove" >delete</button></li>))}
     </ul>
   );
 };
