@@ -19,4 +19,14 @@ const reducer = (state = [], action) => {
   return state
 }
 
+export const initializeNotes = () => {
+  return async (dispatch) => {
+    const notes = await noteServices.getAll()
+    dispatch({
+      type: actionTypes.INIT_NOTES,
+      data: notes
+    })
+  }
+}
+
 export default reducer
