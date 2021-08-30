@@ -11,11 +11,14 @@ const Notes = () => {
   })
   const remove = name => ({
     type: actionTypes.REMOVE,
+    removeName: name
   })
   return (
-    <ul>
-      {notes.map((note) => (<li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text} <button className="button-remove" >delete</button></li>))}
-    </ul>
+    <>
+      <ul>
+        {notes.map(note => (<><li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text}  </li> <button className="button-remove" onClick={() => dispatch(remove(note.text))}>delete</button></>))}
+      </ul>
+    </>
   );
 };
 
