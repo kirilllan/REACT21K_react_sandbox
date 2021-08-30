@@ -29,4 +29,14 @@ export const initializeNotes = () => {
   }
 }
 
+export const createNote = (content) => {
+  return async (dispatch) => {
+    const newNote = await noteServices.createNew(content)
+    dispatch({
+      type: actionTypes.ADD_TODO,
+      data: newNote
+    })
+  }
+}
+
 export default reducer
