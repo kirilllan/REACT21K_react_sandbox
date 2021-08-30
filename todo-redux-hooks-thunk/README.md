@@ -10,3 +10,5 @@
 ## new script in package.json -> "server": "json-server -p3001 --watch db.json"
 ## -> create db.json in root 
 ## -> npm run server
+
+## npm install axios
