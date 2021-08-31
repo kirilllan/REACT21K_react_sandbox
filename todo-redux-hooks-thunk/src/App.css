@@ -21,11 +21,11 @@ body {
   text-decoration: line-through;
 }
 .button-remove {
-  color:indianred;
+  color:#9d9aa3;
   margin-left: 10px;
   border-radius: 0 10px 0 10px;
   border: none;
-  font-size: 70%;
+  font-size: 80%;
   opacity: 80%;
   background-color: rgba(98, 185, 64, 0.1);
 }
@@ -59,4 +59,25 @@ body {
   right: 0px;
   margin-left: 500px;
   width: 60%;
+}
+
+
+/* mobile */
+@media (max-width: 1200px) {
+  .side-img {
+    width: 50%;
+  }
+}
+@media (max-width: 960px) {
+  .side-img {
+    width: 30%;
+  }
+}
+@media (max-width: 700px) {
+  .side-img {
+    display: none;
+  }
+  .todo-form-input-2 {
+    margin-top: 10px;
+  }
 }
