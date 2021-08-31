@@ -1,6 +1,6 @@
 
 
-# commands used:
+# commands used & App UI image:
 ## install redux
 ## install react-redux
 ## npm install --save redux-devtools-extension
@@ -12,3 +12,6 @@
 ## -> npm run server
 
 ## npm install axios
+
+
+![Alt](public\app_ui_v1.png)
