@@ -1,5 +1,4 @@
 import React from 'react';
-//import * as actionTypes from '../store/actions'
 
 import { useDispatch } from 'react-redux';
 import { createNote } from '../store/reducers/reducer'
