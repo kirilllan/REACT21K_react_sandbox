@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <NewNote />
       <Notes />
+      <img className="side-img" src="notice_one_guy.jpeg" />
     </div>
   );
 }

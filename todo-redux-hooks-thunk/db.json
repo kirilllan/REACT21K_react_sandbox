@@ -19,6 +19,11 @@
       "text": "e32",
       "completed": false,
       "id": 8
+    },
+    {
+      "text": "this is a long todo task for testing purposes. Testing texts position and flow 123456789, maybe this is long enough.",
+      "completed": false,
+      "id": 9
     }
   ]
 }

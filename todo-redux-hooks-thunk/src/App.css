@@ -1,24 +1,33 @@
 * {
   box-sizing: border-box;
   margin: 0;
-
 }
 .App {
   font-style: italic;
+  margin: 50px 20px 20px 50px;
+}
+body {
+  background-color: rgba(64, 185, 151, .1);
 }
 
 .todo {
   color: #9FB940;
   font-size: 130%;
+  margin: 5px;
+  max-width: 315px; 
+  word-wrap: break-word;
 }
 .todo.strike {
   text-decoration: line-through;
 }
 .button-remove {
-  color:#B95A40;
+  color:indianred;
   margin-left: 10px;
-  border-radius: 0 20px 0 20px;
+  border-radius: 0 10px 0 10px;
   border: none;
+  font-size: 70%;
+  opacity: 80%;
+  background-color: rgba(98, 185, 64, 0.1);
 }
 .li-and-button-wrapper {
   display: flex;
@@ -30,7 +39,9 @@
 }
 .todo-form-input-1 {
   font-size: 150%;
-  border: 10px #40B997 double;
+  border: 6px #40B997 double;
+  font-style: italic;
+  color: #9FB940; 
 }
 .todo-form-input-2 {
   margin-left: 5px;
@@ -38,4 +49,14 @@
   color: #40B997;
   border-radius: 20px 0 20px 0;
   border: none;
+  background-color: rgba(98, 185, 64, 0.1);
+}
+
+.side-img {
+  float: right;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  margin-left: 500px;
+  width: 60%;
 }
