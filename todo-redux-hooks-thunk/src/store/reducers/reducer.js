@@ -15,10 +15,10 @@ const reducer = (state = [], action) => {
     case actionTypes.REMOVE:
       return state.filter(note => {
         if (note.text !== action.removeName) return note
-        else axios.delete('http://localhost:3001/notes/' + note.id)
+        else { axios.delete('http://localhost:3001/notes/' + note.id); return false }
       })
+    default: return state;
   }
-  return state
 }
 
 export const initializeNotes = () => {

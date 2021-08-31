@@ -16,7 +16,7 @@ const Notes = () => {
   return (
     <>
       <ul>
-        {notes.map(note => (<><li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}>{note.text}  </li> <button className="button-remove" onClick={() => dispatch(remove(note.text))}>delete</button></>))}
+        {notes.map(note => (<><li key={note.id} onClick={() => dispatch(toggleTodo(note.id))} className={note.completed ? 'strike todo' : 'todo'}> {note.text} </li> <button key={Math.random().toString()} className="button-remove" onClick={() => dispatch(remove(note.text))}>delete</button></>))}
       </ul>
     </>
   );

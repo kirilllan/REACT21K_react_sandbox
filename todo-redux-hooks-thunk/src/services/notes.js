@@ -13,4 +13,5 @@ const createNew = async (text) => {
   return response.data
 }
 
-export default { getAll, createNew }
+const exports = { getAll, createNew }
+export default exports
