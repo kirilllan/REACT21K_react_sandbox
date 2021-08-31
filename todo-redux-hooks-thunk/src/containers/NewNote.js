@@ -13,9 +13,9 @@ const NewNote = () => {
   }
 
   return (
-    <form onSubmit={addTodo}>
-      <input type="text" name="noteInput"></input>
-      <input type="submit" value="Add note"></input>
+    <form onSubmit={addTodo} className="todo-form">
+      <input type="text" name="noteInput" className="todo-form-input-1"></input>
+      <input type="submit" value="Add note" className="todo-form-input-2"></input>
     </form>
   );
 };

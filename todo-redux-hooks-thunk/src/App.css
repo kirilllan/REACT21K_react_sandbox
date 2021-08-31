@@ -1,6 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+.App {
+  font-style: italic;
+}
+
+.todo {
+  color: #9FB940;
+  font-size: 130%;
+}
 .todo.strike {
   text-decoration: line-through;
 }
 .button-remove {
-  color: crimson;
+  color:#B95A40;
+  margin-left: 10px;
+  border-radius: 0 20px 0 20px;
+  border: none;
+}
+.li-and-button-wrapper {
+  display: flex;
+}
+
+
+.todo-form {
+  margin: 20px;
+}
+.todo-form-input-1 {
+  font-size: 150%;
+  border: 10px #40B997 double;
+}
+.todo-form-input-2 {
+  margin-left: 5px;
+  font-size: 150%;
+  color: #40B997;
+  border-radius: 20px 0 20px 0;
+  border: none;
 }
