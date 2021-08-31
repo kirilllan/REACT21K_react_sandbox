@@ -28,6 +28,7 @@ body {
   font-size: 80%;
   opacity: 80%;
   background-color: rgba(98, 185, 64, 0.1);
+  cursor: pointer;
 }
 .li-and-button-wrapper {
   display: flex;
